@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org">
+       
+<head>
+<meta charset="ISO-8859-1">
+<title>Coffee Shop Project Spring Boot</title>
+
+<style>
+.nav ul{
+list-style:none;
+background: #fff;
+ text-align:center;
+ padding:1px;
+ margin:0;
+}
+
+.nav li {
+display:inline-block;
+}
+
+.nav a{
+text-decoration:none;
+color:#180B08 ;
+width:170px;
+display:block;
+padding:20px;
+font-size:21px;
+
+}
+
+.nav img {
+width:125px;
+
+}
+
+.row{
+margin:10px;
+text-align:center;
+}
+.col-md-4{
+display:table-cell;
+padding: 10px;
+width:33%;
+
+}
+
+.final{
+
+text-align:center;
+}
+.type{
+text-align:center;
+}
+
+.picture{
+text-align:center;
+left: 0%;
+width: 100%;
+
+}
+
+</style>
+</head>
+<body>
+  
+     <div class="nav">
+      <ul>
+           <li><a href="#" >ABOUT</a></li>
+           <li><a href="/menu" >MENU</a></li>
+           <li><a href="#">
+           <img src="onlinelogomaker-070520-1436-9373-500.jpg">
+           </a>
+           <li><a href="#" >PRESS</a></li>
+           <li><a href="#" >CONTACT US</a></li>
+      </ul>
+     </div>
+     
+     <div class=picture> <img src="onlinelogomaker-070520-1436-9373-500.jpg"></div>
+
+  
+  <div class=final>
+  <div class=type> <p>FOOD</p></div>
+  <div class="row" th:each = "i : ${food}">
+  	<div class="col-md-4" th:text="${i.name}"></div>
+  	<div class="col-md-4" th:text="${i.description}"></div>
+  	<div class="col-md-4" th:text="${i.price}" ></div>
+  	</div>
+  	
+  	 <div class=type> <p>TACOS</p></div>
+  <div class="row" th:each = "i : ${tacos}">
+  	<div class="col-md-4" th:text="${i.name}"></div>
+  	<div class="col-md-4" th:text="${i.description}"></div>
+  	<div class="col-md-4" th:text="${i.price}" ></div>
+  	</div>
+  	
+  		 <div class=type> <p>FRESH STARTS</p></div>
+  <div class="row" th:each = "i : ${fresh}">
+  	<div class="col-md-4" th:text="${i.name}"></div>
+  	<div class="col-md-4" th:text="${i.description}"></div>
+  	<div class="col-md-4" th:text="${i.price}" ></div>
+  	</div>
+  	
+  		 <div class=type> <p>SMOOTHIES</p></div>
+  <div class="row" th:each = "i : ${smoothies}">
+  	<div class="col-md-4" th:text="${i.name}"></div>
+  	<div class="col-md-4" th:text="${i.description}"></div>
+  	<div class="col-md-4" th:text="${i.price}" ></div>
+  	</div>
+  	
+  	 <div class=type> <p>SAGE KITCHEN BAKED GOODS</p></div>
+  <div class="row" th:each = "i : ${kitchen}">
+  	<div class="col-md-4" th:text="${i.name}"></div>
+  	<div class="col-md-4" th:text="${i.price}" ></div>
+  	</div>
+  	
+  	 <div class=type> <p>DEVOCION COFFEE</p></div>
+  <div class="row" th:each = "i : ${coffee}">
+  	<div class="col-md-4" th:text="${i.name}"></div>
+  	<div class="col-md-4" th:text="${i.price}" ></div>
+  	</div>
+  	
+  	</div>
+  	
+  	<div class="align">
+	<a href="https://www.instagram.com/cibotari_nicoleta/?hl=ro"  target="_blank" ><i class="fa fa-instagram size"></i></a>
+	
+	<a href="https://www.facebook.com/cibotari.nicoleta"  target="_blank"><i class="fa fa-facebook size"></i></a>
+	</div>
+  
+</body>
+</html>
